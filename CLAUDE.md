@@ -1,141 +1,49 @@
 # Agent Instructions
 
-This is a personal knowledge base about information theory, communication theory, classification, cybernetics, and related fields. It is maintained by Jakob (@soenderby), a software developer.
+> This is an initial document. It expresses purpose and direction, not settled process. As the collection grows and the curator's understanding deepens, these instructions should evolve. What works at five entries may not work at fifty. Revise freely.
 
 ---
 
-## About the Curator
+## What This Is
 
-**Purpose**: Dual — practical (inform how to organise and retrieve information in other projects) and intellectual (genuine curiosity about the theoretical foundations).
+A personal knowledge base about how information is organised, transmitted, retrieved, and created — across fields including information theory, communication theory, library and information science, cybernetics, network theory, and epistemology.
 
-**Interests**: The theory and practice of organising, transmitting, and retrieving information. The intersections between information theory, communication theory, library/information science, network theory, cybernetics, and epistemology. Both foundational texts and modern applications.
+It is maintained by Jakob (@soenderby), a software developer, with AI agent assistance.
 
-**The primary audience** is Jakob himself, and other technically-minded people who want to understand the deep structure of information and how it flows through systems.
+## Why It Exists
 
-**Quality filter**: This field is less commercially noisy than AI, but has its own failure modes: textbook summaries that add no interpretation, surface-level introductions that don't engage with the actual ideas, and secondary sources that flatten the original's nuance. Primary sources are strongly preferred. People who developed the ideas are preferred over people who summarise them. Depth over breadth.
+Two purposes:
 
----
+1. **To inform practice.** Jakob maintains [ai-resources](https://github.com/soenderby/ai-resources), a curated knowledge base about AI and agents. That project is itself an experiment in organising and retrieving information with AI. Understanding the theoretical foundations — classification, indexing, communication, feedback, network structure — should improve how that project (and future ones) work as they grow.
 
-## Start of Session
+2. **To follow a genuine curiosity.** The subject is fascinating in its own right. The connections between Shannon's information theory, Luhmann's communication theory, Boyd's epistemology, and Hjørland's classification theory are deep and not widely appreciated. This collection is a place to explore those connections.
 
-When beginning a session:
+Both purposes are real. Neither is a cover for the other.
 
-1. **Read `librarian-notes.md`** — running notes, decisions, gaps, open questions.
-2. **Read `resources/index.md`** — compact inventory of what is tracked.
-3. **Read full canonical files only when the task needs them** — `resources/books.md`, `resources/articles.md`, etc.
+## What Belongs Here
 
----
+Sources that deepen understanding of how information works — how it is structured, how it flows, how it is found, how it is lost, how systems that process it succeed or fail. The scope is broad on purpose. The connecting thread is not a single discipline but a question: **how do systems organise, transmit, retrieve, and create information?**
 
-## Repo Structure
+Foundational texts matter here. Many of the most important ideas in this space are decades old and hold up. Primary sources — the people who developed the ideas — are preferred over summaries and introductions, though a well-written secondary source that reveals something the primary doesn't is welcome.
 
-```
-information-theory/
-├── README.md
-├── CLAUDE.md              ← you are here
-├── librarian-notes.md     ← running notes across sessions
-└── resources/
-    ├── index.md           ← compact inventory of what is tracked
-    ├── books.md           ← book-length sources
-    ├── articles.md        ← papers, essays, shorter pieces
-    ├── people.md          ← thinkers worth following
-    └── projects.md        ← tools, software, implementations
-```
+The quality bar is: does this source contribute a specific idea, framework, or finding that deepens understanding? Topic-level summaries ("a book about information theory") are not useful. Specific insights ("proves that any channel has a maximum reliable transmission rate determined by its noise characteristics") are.
 
----
+## How to Work in This Repo
 
-## Adding Resources
+Read `librarian-notes.md` and `resources/index.md` at the start of a session to know what's already here. Open full resource files only when the task needs them.
 
-### Workflow
+Read sources before annotating them. Write annotations that capture specific ideas, not general topics. Note connections to other entries when they exist. Be honest about limitations — if something hasn't been fully read or understood, say so.
 
-1. **Fetch and read the source first.** Never annotate from a title or URL alone. When the agent drafts an annotation, the curator is encouraged to engage with the source directly. If a source seems below the quality bar, say so honestly.
-2. **Write a meaningful annotation** — see quality guidelines below.
-3. **Place in the right file** — books.md for book-length works, articles.md for papers and essays, people.md for thinkers, projects.md for tools.
-4. **Update cross-links** — if a person entry exists, add their work to their entry. If a work is by someone in people.md, link to them.
-5. **Update `librarian-notes.md`** if the session surfaced something worth remembering.
-6. **Note connections.** When adding an entry, check whether it strengthens, complicates, or extends something already in the collection.
-7. **Commit** with a short descriptive message in present tense.
+The file structure (`resources/books.md`, `articles.md`, `people.md`, `projects.md`, `index.md`) is a starting point. It may need to change as the collection grows. New files, new categories, new conventions should emerge from actual need, not from anticipated need.
 
-### Entry Formats
+Use `librarian-notes.md` to record decisions, connections, gaps, and open questions across sessions. Keep it short and dated.
 
-**Person** (`resources/people.md`):
-```markdown
-## Name
-- Link label: url
+## What to Draw From
 
-Who they are and what makes them worth tracking. What perspective or contribution distinguishes them? 1–3 sentences.
-```
+The curatorial patterns used in [ai-resources](https://github.com/soenderby/ai-resources) were [extracted into a document](https://github.com/soenderby/ai-resources/blob/main/ai-generated/curatorial-patterns-extracted.md) that describes ten practices — staged loading, annotation quality tests, the corroboration pattern, cross-linking, hot/cold memory, and others — along with what problems they solved and what transfers to other collections.
 
-**Book** (`resources/books.md`):
-```markdown
-## [Title](url)
-By [Author](people.md#author). What the book contributes. Capture the distinctive idea or framework, not just the topic.
-```
+These are a resource, not rules. Consult them when a specific problem arises (How should near-miss sources be handled? When does a running notes file need archiving? How should annotations be tested for quality?). Don't adopt them preemptively. This collection will encounter its own problems and may need its own solutions.
 
-**Article/Paper** (`resources/articles.md`):
-```markdown
-## [Title](url)
-By [Author](people.md#author). What the piece contributes. Capture the specific insight, not just the topic.
-```
+## A Note on the Seed Entries
 
-**Project** (`resources/projects.md`):
-```markdown
-## [Project Name](url)
-By [Author](people.md#author). What the project does and why it belongs here.
-```
-
-Separate all entries with `---`.
-
-### What Makes a Good Annotation
-
-- **Capture the specific idea, not the general topic.** "Proves that any channel has a maximum rate at which information can be reliably transmitted, and that rate is determined by the channel's noise characteristics" is useful. "Book about information theory" is not.
-- **The "So What?" test.** Why does this source matter to the collection? What does the reader gain from knowing about it?
-- **Note what's distinctive.** What makes this the source to read on this topic?
-- **Note connections** to other entries when they exist.
-- **Write for clarity.** Assume the reader is intelligent but may not know the field's jargon.
-- **Be honest about limitations.** If you haven't fully engaged with a source, say so.
-
-### Corroboration: "Also noted by"
-
-When a source makes the same point as an existing entry without adding a new idea, record it as an "Also noted by" line:
-
-```markdown
-Also noted by: [Author (context, date)](url) — brief note on what angle they bring.
-```
-
-The source must have been read. Different context or voice required. Brief — name the who and the angle.
-
-### What NOT to Add
-
-- Textbook summaries that don't engage with the actual ideas
-- Surface-level introductions that flatten the original's nuance
-- Secondary sources when the primary source is available and readable
-- Anything you haven't read
-
----
-
-## Librarian Memory
-
-- **`librarian-notes.md`** — running notes, read at session start. Keep entries short and dated.
-- Archive when the file grows heavy (~200 lines). Create `librarian-archive.md` when needed.
-
-Update `librarian-notes.md` when:
-- A curatorial decision is made that isn't obvious from the guidelines
-- A connection between entries is noticed
-- A gap in the collection is identified
-- The curator says something that reveals taste or preference worth preserving
-
----
-
-## General Conventions
-
-- **Prefer simplicity.** Readable markdown.
-- **Suggest structure organically.** Only create new files when content warrants them.
-- **File names:** lowercase, hyphen-separated.
-- **Branch:** `main`
-- **Commit messages:** short, descriptive, present tense.
-
----
-
-## Related
-
-This repo's curatorial patterns were extracted from [ai-resources](https://github.com/soenderby/ai-resources). See the [extracted patterns document](https://github.com/soenderby/ai-resources/blob/main/ai-generated/curatorial-patterns-extracted.md) for the full operational DNA.
+The initial people and book entries were written from general knowledge, not from reading the sources. They are scaffolding — enough context to know who these thinkers are and why they're here, but not real annotations. They should be replaced with proper annotations as the sources are read.
